@@ -1,5 +1,6 @@
 import './Components.scss'
 import logo from "../assets/img/Logo.png"
+import { motion } from 'framer-motion'
 
 export default function Main(){
 
@@ -11,9 +12,26 @@ export default function Main(){
         "Бесплатная практика на реальных проектах"
     ]
 
+    const fadeInOut = [
+        {
+            scale: .7,
+            opacity: 0,
+        },
+        {
+            scale: 1,
+            opacity: 1,
+        }
+    ]
+
     return(
         <>
-            <div className="main-page">
+        
+            <motion.div
+            className="main-page"
+            initial={fadeInOut[0]}
+            animate={fadeInOut[1]}
+            exit={fadeInOut[0]}
+            >
                 <div className="big-card">
                     <div className="blur-circle"></div>
                     <img src={logo} alt="PentaPulse Logo" />
@@ -25,12 +43,16 @@ export default function Main(){
                 <h3 style={{marginLeft: "2rem"}}>От нас:</h3>
                 <div className="cardholder">
                     {whatYouGet.map((e, i) => 
-                        <div key={i} className="card">
+                        <motion.div
+                        key={i}
+                        className="card"
+                        whileHover={{scale: 1.1}}
+                        >
                             <h4>{e}</h4>
-                        </div>
+                        </motion.div>
                     )}
                 </div>
-            </div>
+            </motion.div>
         </>
     );
 }

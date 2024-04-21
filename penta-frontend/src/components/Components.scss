@@ -8,6 +8,7 @@ header {
     margin-bottom: 2rem;
     flex-basis: 30%;
     flex-shrink: 1;
+    margin-top: 2rem;
 
     nav {
         flex-shrink: 2;
@@ -97,7 +98,6 @@ header {
         .card {
             background-color: var(--bg-clr-light1);
             border: var(--block-border);
-            box-shadow: var(--box-shadow);
             border-radius: 2rem;
             padding: 2rem;
 
