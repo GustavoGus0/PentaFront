@@ -34,3 +34,71 @@ header {
 
 /* ------ MAIN CARD ------ */
 
+.main-page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+    .big-card {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        gap: 6rem;
+        background-color: var(--bg-clr-light1);
+        padding: 2rem;
+        border-radius: 2rem;
+        border: var(--block-border);
+        box-shadow: var(--box-shadow);
+    
+        .blur-circle {
+            position: absolute;
+            right: -15rem;
+            top: -15rem;
+            filter: blur(300px);
+            background-color: var(--accent-clr);
+            min-height: 70%;
+            aspect-ratio: 1/1;
+        }
+    
+        img {
+            width: 12%;
+            flex-grow: 1;
+        }
+    
+        .text-box {
+            flex-grow: 3;
+    
+            h2 {
+                font-size: 4rem;
+            }
+    
+            p {
+                font-size: 1.5rem;
+                color: var(--txt-clr-transp);
+            }
+        }
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    .cardholder {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        .card {
+            background-color: var(--bg-clr-light1);
+            border: var(--block-border);
+            box-shadow: var(--box-shadow);
+            border-radius: 2rem;
+            padding: 2rem;
+
+            h4 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
