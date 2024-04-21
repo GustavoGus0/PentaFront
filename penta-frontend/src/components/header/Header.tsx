@@ -1,5 +1,6 @@
 import logo from "../../assets/img/Logo.png";
 import '../Components.scss';
+import { Link } from 'react-router-dom';
 
 export default function Header(){
 
@@ -8,9 +9,9 @@ export default function Header(){
             <header>
                 <img src={logo} alt="PentaPulse Logo" />
                 <nav>
-                    <a href="#">Главная</a>
-                    <a href="#">О команде</a>
-                    <a href="#">Контакты</a>
+                    <Link to="/">Главная</Link>
+                    <Link to="/about">О команде</Link>
+                    <Link to="/contacts">Контакты</Link>
                 </nav>
             </header>
         </>

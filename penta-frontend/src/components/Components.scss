@@ -20,9 +20,17 @@ header {
             text-decoration: none;
             color: var(--txt-clr);
             font-size:  1.25rem;
+            transition: .2s ease;
+            font-family: "Poppins", "Verdana", sans-serif;
+        }
+
+        a:hover {
+            scale: 1.1;
+            color: var(--accent-clr);
         }
     }
 }
 
 
 /* ------ MAIN CARD ------ */
+
