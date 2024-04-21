@@ -107,3 +107,24 @@ header {
         }
     }
 }
+
+
+/* ------ ABOUT CONTENT ------ */
+
+.about-container {
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: var(--bg-clr-light1);
+    border: var(--block-border);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    h3 {
+        font-size: 2rem;
+
+    }
+}
+
+

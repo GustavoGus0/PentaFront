@@ -2,6 +2,17 @@ import './Components.scss'
 import logo from "../assets/img/Logo.png"
 import { motion } from 'framer-motion'
 
+export const fadeInOut = [
+    {
+        scale: .7,
+        opacity: 0,
+    },
+    {
+        scale: 1,
+        opacity: 1,
+    }
+]
+
 export default function Main(){
 
     let countProjects = "50+";
@@ -10,17 +21,6 @@ export default function Main(){
         `Проекты, которыми пользуются: ${countProjects}`,
         "Сложные и интересные задачи",
         "Бесплатная практика на реальных проектах"
-    ]
-
-    const fadeInOut = [
-        {
-            scale: .7,
-            opacity: 0,
-        },
-        {
-            scale: 1,
-            opacity: 1,
-        }
     ]
 
     return(
