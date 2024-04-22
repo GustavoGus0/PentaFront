@@ -40,12 +40,28 @@ export default function Main(){
                         <p>IT-команда</p>
                     </div>
                 </div>
-                <h3 style={{marginLeft: "2rem"}}>От нас:</h3>
+
+                <motion.h3 
+                style={{marginLeft: "2rem"}}
+                initial={fadeInOut[0]}
+                animate={fadeInOut[1]}
+                transition={{
+                    delay: 0.2
+                }}
+
+
+                >От нас:</motion.h3>
+
                 <div className="cardholder">
                     {whatYouGet.map((e, i) => 
                         <motion.div
                         key={i}
                         className="card"
+                        initial={fadeInOut[0]}
+                        animate={fadeInOut[1]}
+                        transition={{
+                            delay: whatYouGet.length < 10 ? 0.3 + i/7 : 0.1 + i/12
+                        }}
                         whileHover={{scale: 1.1}}
                         >
                             <h4>{e}</h4>
