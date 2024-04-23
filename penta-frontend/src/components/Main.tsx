@@ -62,7 +62,6 @@ export default function Main(){
                         transition={{
                             delay: whatYouGet.length < 10 ? 0.3 + i/7 : 0.1 + i/12
                         }}
-                        whileHover={{scale: 1.1}}
                         >
                             <h4>{e}</h4>
                         </motion.div>

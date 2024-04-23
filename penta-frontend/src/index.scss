@@ -21,3 +21,28 @@ body {
     background-color: var(--scrollbar-thumb);
     border-radius: 30px;
 }
+
+.center-container {
+    width: 70%;
+    margin: 0 auto;
+    max-width: 1920px;
+    height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .center-container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .center-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .center-container {
+        width: 95%;
+    }
+}
