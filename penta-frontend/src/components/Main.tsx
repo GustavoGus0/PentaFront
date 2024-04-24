@@ -25,7 +25,6 @@ export default function Main(){
 
     return(
         <>
-        
             <motion.div
             className="main-page"
             initial={fadeInOut[0]}

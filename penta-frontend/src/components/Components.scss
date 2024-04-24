@@ -66,6 +66,7 @@ header {
             right: -15rem;
             top: -15rem;
             filter: blur(300px);
+            border-radius: 50%;
             background-color: var(--accent-clr);
             min-height: 70%;
             aspect-ratio: 1/1;
@@ -142,18 +143,20 @@ header {
 
 /* ------ CONTACTS CONTENT ------ */
 
-.flex-block {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.grid-block {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2rem;
+    max-width: 100%;
+    justify-items: center;
 
     .felow-item {
         background-color: var(--bg-clr-light2);
         border: var(--block-border);
         box-shadow: var(--box-shadow);
         border-radius: 2rem;
-        flex-grow: 1;
-        flex-basis: 300px;
+        min-width: 3rem;
+        width: 100%;
         padding: 2rem;
         display: flex;
         flex-direction: column;
@@ -208,14 +211,19 @@ header {
 
 /* -------- MEDIA QUERIES FOR RESPONSIBILITY -------- */
 
-@media screen and (max-width: 1629px) {
-    .flex-block {
-        justify-content: center;
-        gap: 1rem;
+@media screen and (max-width: 1748px) {
+    .grid-block {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1326px) {
+    .grid-block {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media all and (max-width: 1036px) {
     .main-page {
         .big-card {
             gap: 4rem;
@@ -238,9 +246,13 @@ header {
             }
         }
     }
+
+    .grid-block {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-@media screen and (max-width: 822px) {
+@media all and (max-width: 822px) {
     header {
         nav {
             a {
@@ -274,7 +286,7 @@ header {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
 
     .main-page {
         .cardholder {
@@ -293,7 +305,7 @@ header {
         }
     }
 
-    .flex-block {
+    .grid-block {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -331,7 +343,7 @@ header {
     }
 }
 
-@media screen and (max-width: 636px) {
+@media all and (max-width: 636px) {
     header {
         nav {
             flex-basis: 75%;
@@ -361,7 +373,7 @@ header {
     }
 }
 
-@media screen and (max-width: 522px) {
+@media all and (max-width: 522px) {
     header {
         nav {
             flex-basis: 75%;
@@ -384,8 +396,8 @@ header {
     }
 }
 
-@media screen and (max-width: 435px) {
-    .flex-block {
+@media all and (max-width: 435px) {
+    .grid-block {
         .felow-item {
             border-radius: 2rem;
             padding: 1rem;
@@ -479,10 +491,10 @@ header {
 @media screen and (max-width: 350px) {
     header {
         nav {
-                a {
-                    padding: .5rem;
-                    font-size: 1rem;
-                }
+            a {
+                padding: .5rem;
+                font-size: 1rem;
             }
+        }
     }
 }

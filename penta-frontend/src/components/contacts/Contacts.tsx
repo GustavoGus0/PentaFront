@@ -46,7 +46,7 @@ export default function Contacts(){
     
     return(
         <>
-            <div className="flex-block">
+            <div className="grid-block">
                 {felows.map((felow, index) => 
                     <Felow key={index} index={index} felow={felow} />
                 )}
